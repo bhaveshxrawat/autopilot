@@ -1,0 +1,13 @@
+header {
+  border-bottom: 1px solid var(--foreground);
+  padding: 0.5em 1em;
+  .header--wrapper {
+    display: flex;
+    align-items: center;
+    .lhs {
+      .app-name {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

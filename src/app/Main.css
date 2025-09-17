@@ -1,0 +1,13 @@
+main {
+  padding-inline: 1em;
+  .main--wrapper {
+    padding-block: 4em;
+    .app-heading {
+      font-size: 3rem;
+    }
+    .app-body {
+      font-size: 1.25rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
