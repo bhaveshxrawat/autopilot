@@ -10,4 +10,16 @@ main {
       margin-top: 0.25rem;
     }
   }
+  @media (width <= 26.25rem) {
+    .main--wrapper {
+      padding-block: 2em;
+      .app-heading {
+        font-size: 1.5rem;
+      }
+      .app-body {
+        font-size: 1rem;
+        margin-top: 0.2rem;
+      }
+    }
+  }
 }

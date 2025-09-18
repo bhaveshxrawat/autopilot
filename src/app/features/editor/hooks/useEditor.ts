@@ -1,5 +1,5 @@
 import { schema } from "prosemirror-schema-basic";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import "../editor.css";
 import { baseKeymap } from "prosemirror-commands";
 import { history, redo, undo } from "prosemirror-history";
@@ -12,7 +12,7 @@ export function useEditor(
   onChange?: (content: string) => void,
 ) {
   const viewRef = useRef<EditorView | null>(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (placeholder.current && !viewRef.current) {
       const editorState = EditorState.create({
         schema,

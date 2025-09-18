@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Autopilot",
-  description: "AI finishes what you started writing.",
+  description: "Write in autopilot mode.",
 };
 
 export default function RootLayout({
