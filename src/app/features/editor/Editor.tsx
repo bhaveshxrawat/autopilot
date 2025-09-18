@@ -27,8 +27,8 @@ export default function Editor() {
       toast.error(error.message);
     },
   });
-  useEditor(editorRef, handleContentSend, completion);
-  // useContinueWriting(editorRef, completion)
+  const editorViewRef = useEditor(editorRef, handleContentSend);
+  useContinueWriting(editorViewRef, completion);
   async function handleContinueWriting() {
     const input = state.context.content;
     if (input.trim() === "") {

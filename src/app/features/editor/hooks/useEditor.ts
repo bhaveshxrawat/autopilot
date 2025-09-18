@@ -10,7 +10,6 @@ import { EditorView } from "prosemirror-view";
 export function useEditor(
   placeholder: React.RefObject<HTMLDivElement | null>,
   onChange?: (content: string) => void,
-  completion?: string,
 ) {
   const viewRef = useRef<EditorView | null>(null);
   useEffect(() => {
@@ -48,13 +47,5 @@ export function useEditor(
       }
     };
   }, [placeholder.current, onChange]);
-
-  useEffect(() => {
-    if (viewRef.current && completion && completion.length > 0) {
-      console.log("Inserting");
-      const { state, dispatch } = viewRef.current;
-      const tr = state.tr.insertText(completion, state.selection.to);
-      dispatch(tr);
-    }
-  }, [completion]);
+  return viewRef;
 }
